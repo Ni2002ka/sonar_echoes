@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class EchoPulseController : MonoBehaviour
 {
@@ -14,11 +17,13 @@ public class EchoPulseController : MonoBehaviour
     public float speedOfSound = 343f;
     public float echoDelayMultiplier = 8f;
 
-    [Header("Cone Raycast")]
+    [Header("Cone (20°)")]
     public LayerMask echoLayers = ~0;
     public int horizontalRays = 24;
     public int verticalRays = 12;
-    public float coneAngle = 18f;
+    public float coneAngle = 20f;
+    [Range(0.01f, 1f)]
+    public float coneSoftness = 0.35f;
 
     private AudioSource pulseSource;
 
@@ -52,16 +57,57 @@ public class EchoPulseController : MonoBehaviour
         {
             scanner.maxDistance = maxDistance;
             scanner.speedOfSound = speedOfSound;
+            scanner.coneAngleDegrees = coneAngle;
+            scanner.coneSoftness = coneSoftness;
         }
     }
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch) || Input.GetKeyDown(KeyCode.Space))
+        if (GetOvrButtonDown(OVRInput.Button.One) || WasKeyPressed(KeyCode.Space))
         {
             FireScanner();
         }
     }
+
+    static bool GetOvrButtonDown(OVRInput.Button button)
+    {
+        try
+        {
+            return OVRInput.GetDown(button);
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    static bool WasKeyPressed(KeyCode keyCode)
+    {
+#if ENABLE_INPUT_SYSTEM
+        if (Keyboard.current == null)
+        {
+            return false;
+        }
+
+        Key? key = KeyCodeToKey(keyCode);
+        return key.HasValue && Keyboard.current[key.Value].wasPressedThisFrame;
+#else
+        return Input.GetKeyDown(keyCode);
+#endif
+    }
+
+#if ENABLE_INPUT_SYSTEM
+    static Key? KeyCodeToKey(KeyCode keyCode)
+    {
+        if (keyCode == KeyCode.Space)
+        {
+            return Key.Space;
+        }
+
+        return null;
+    }
+#endif
 
     void FireScanner()
     {
@@ -88,6 +134,7 @@ public class EchoPulseController : MonoBehaviour
             scanner.maxDistance = maxDistance;
             scanner.speedOfSound = speedOfSound;
             scanner.coneAngleDegrees = coneAngle;
+            scanner.coneSoftness = coneSoftness;
             scanner.StartScan(head.position, head.forward, farthestHit);
         }
 
@@ -96,14 +143,17 @@ public class EchoPulseController : MonoBehaviour
 
     void CastConeGrid(out RaycastHit[,] hits, out bool[,] didHit)
     {
-        hits = new RaycastHit[horizontalRays, verticalRays];
-        didHit = new bool[horizontalRays, verticalRays];
+        int rayH = Mathf.Max(1, horizontalRays);
+        int rayV = Mathf.Max(1, verticalRays);
 
-        for (int x = 0; x < horizontalRays; x++)
+        hits = new RaycastHit[rayH, rayV];
+        didHit = new bool[rayH, rayV];
+
+        for (int x = 0; x < rayH; x++)
         {
-            for (int y = 0; y < verticalRays; y++)
+            for (int y = 0; y < rayV; y++)
             {
-                Vector3 direction = GetGridConeDirection(x, y);
+                Vector3 direction = GetGridConeDirection(x, y, rayH, rayV);
 
                 Ray ray = new Ray(head.position, direction);
 
@@ -123,10 +173,10 @@ public class EchoPulseController : MonoBehaviour
         }
     }
 
-    Vector3 GetGridConeDirection(int x, int y)
+    Vector3 GetGridConeDirection(int x, int y, int rayH, int rayV)
     {
-        float u = horizontalRays <= 1 ? 0f : (x / (float)(horizontalRays - 1)) * 2f - 1f;
-        float v = verticalRays <= 1 ? 0f : (y / (float)(verticalRays - 1)) * 2f - 1f;
+        float u = rayH <= 1 ? 0f : (x / (float)(rayH - 1)) * 2f - 1f;
+        float v = rayV <= 1 ? 0f : (y / (float)(rayV - 1)) * 2f - 1f;
 
         float angleRad = coneAngle * Mathf.Deg2Rad;
 
@@ -142,10 +192,12 @@ public class EchoPulseController : MonoBehaviour
     float GetFarthestHitDistance(RaycastHit[,] hits, bool[,] didHit)
     {
         float farthest = 0f;
+        int rayH = hits.GetLength(0);
+        int rayV = hits.GetLength(1);
 
-        for (int x = 0; x < horizontalRays; x++)
+        for (int x = 0; x < rayH; x++)
         {
-            for (int y = 0; y < verticalRays; y++)
+            for (int y = 0; y < rayV; y++)
             {
                 if (!didHit[x, y])
                 {
@@ -164,9 +216,12 @@ public class EchoPulseController : MonoBehaviour
 
     void PlayEchoesFromHits(RaycastHit[,] hits, bool[,] didHit)
     {
-        for (int x = 0; x < horizontalRays; x += 4)
+        int rayH = hits.GetLength(0);
+        int rayV = hits.GetLength(1);
+
+        for (int x = 0; x < rayH; x += 4)
         {
-            for (int y = 0; y < verticalRays; y += 3)
+            for (int y = 0; y < rayV; y += 3)
             {
                 if (!didHit[x, y])
                 {

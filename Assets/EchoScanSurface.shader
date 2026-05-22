@@ -118,9 +118,11 @@ Shader "Custom/EchoSegmentScanSurface"
                     float cosAngle = dot(dir, forward);
                     float cosLimit = cos(_ConeAngleRad);
 
+                    // Softness scales with cone width (fixed cosine offset was ~23° for narrow cones).
+                    float coneFeather = _ConeSoftness * max(1.0 - cosLimit, 1e-6);
                     float coneMask = smoothstep(
-                        cosLimit - _ConeSoftness,
-                        cosLimit + _ConeSoftness * 0.25,
+                        cosLimit - coneFeather,
+                        cosLimit + coneFeather * 0.25,
                         cosAngle
                     );
 

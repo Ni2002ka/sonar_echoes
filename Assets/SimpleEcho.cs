@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class SimpleEcho : MonoBehaviour
 {
@@ -44,7 +47,7 @@ public class SimpleEcho : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One) || Input.GetKeyDown(KeyCode.Space))
+        if (OVRInput.GetDown(OVRInput.Button.One) || WasSpacePressed())
         {
             EmitEchoPulse();
         }
@@ -158,4 +161,12 @@ public class SimpleEcho : MonoBehaviour
         Destroy(ringObj);
     }
 
+    static bool WasSpacePressed()
+    {
+#if ENABLE_INPUT_SYSTEM
+        return Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame;
+#else
+        return Input.GetKeyDown(KeyCode.Space);
+#endif
+    }
 }

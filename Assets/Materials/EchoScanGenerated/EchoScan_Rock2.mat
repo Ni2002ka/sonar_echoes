@@ -30,7 +30,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlbedoStrength: 0.4
-    - _ConeAngleRad: 0.31415927
+    - _ConeAngleRad: 0.06981317
     - _ConeSoftness: 0.08
     - _EchoIntensity: 3.5
     - _EchoRadius: -100

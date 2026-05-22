@@ -1600,7 +1600,19 @@ PrefabInstance:
       objectReference: {fileID: 274303674}
     - target: {fileID: 5189249618257727431, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
       propertyPath: coneAngle
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189249618257727431, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: horizontalRays
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189249618257727431, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: verticalRays
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189249618257727431, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: coneSoftness
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 5873103232946369479, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
       propertyPath: head
@@ -1608,7 +1620,11 @@ PrefabInstance:
       objectReference: {fileID: 274303674}
     - target: {fileID: 5873103232946369479, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
       propertyPath: coneAngleDegrees
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873103232946369479, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: coneSoftness
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 6187223896786712886, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
       propertyPath: m_Name

@@ -177,7 +177,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   horizontalRays: 24
   verticalRays: 12
-  coneAngle: 18
+  coneAngle: 20
+  coneSoftness: 0.35
 --- !u!114 &5873103232946369479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +198,8 @@ MonoBehaviour:
   useSpeedOfSound: 1
   speedOfSound: 343
   travelSpeedMultiplier: 0.35
-  coneAngleDegrees: 18
-  coneSoftness: 0.08
+  coneAngleDegrees: 20
+  coneSoftness: 0.35
   ringWidth: 0.45
   waveTrail: 1.1
   waveFade: 0.65

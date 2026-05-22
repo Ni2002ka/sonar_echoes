@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class EchoPulseController : MonoBehaviour
 {
@@ -53,11 +52,6 @@ public class EchoPulseController : MonoBehaviour
         {
             scanner.maxDistance = maxDistance;
             scanner.speedOfSound = speedOfSound;
-
-            if (scanner.head == null)
-            {
-                scanner.head = head;
-            }
         }
     }
 

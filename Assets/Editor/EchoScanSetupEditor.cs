@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEditor;
@@ -7,6 +8,7 @@ public static class EchoScanSetupEditor
 {
     const string EchoShaderName = "Custom/EchoSegmentScanSurface";
     const string GeneratedFolder = "Assets/Materials/EchoScanGenerated";
+    const string LitFolder = "Assets/Resources/EchoLit";
 
     [MenuItem("Tools/Echo Scan/Setup Mine Scene (Fix Pink)")]
     static void SetupMineScene()
@@ -45,7 +47,176 @@ public static class EchoScanSetupEditor
             "OK"
         );
 
+        BuildMaterialCatalog();
+        WireLightingController();
+
         Debug.Log($"Echo scan mine setup complete. Updated {count} renderer(s).");
+    }
+
+    [MenuItem("Tools/Echo Scan/Build Material Catalog")]
+    public static void BuildMaterialCatalog()
+    {
+        if (!AssetDatabase.IsValidFolder("Assets/Resources"))
+        {
+            AssetDatabase.CreateFolder("Assets", "Resources");
+        }
+
+        const string catalogPath = "Assets/Resources/EchoMaterialCatalog.asset";
+        EchoMaterialCatalog catalog = AssetDatabase.LoadAssetAtPath<EchoMaterialCatalog>(catalogPath);
+
+        if (catalog == null)
+        {
+            catalog = ScriptableObject.CreateInstance<EchoMaterialCatalog>();
+            AssetDatabase.CreateAsset(catalog, catalogPath);
+        }
+
+        List<EchoMaterialCatalog.Entry> entries = new List<EchoMaterialCatalog.Entry>();
+
+        if (!AssetDatabase.IsValidFolder(GeneratedFolder))
+        {
+            Debug.LogWarning("No generated echo materials found. Run Setup Mine Scene first.");
+            catalog.entries = entries.ToArray();
+            EditorUtility.SetDirty(catalog);
+            AssetDatabase.SaveAssets();
+            return;
+        }
+
+        string[] echoGuids = AssetDatabase.FindAssets("t:Material", new[] { GeneratedFolder });
+
+        foreach (string guid in echoGuids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            Material echoMaterial = AssetDatabase.LoadAssetAtPath<Material>(path);
+
+            if (echoMaterial == null || !echoMaterial.name.StartsWith("EchoScan_"))
+            {
+                continue;
+            }
+
+            string baseName = echoMaterial.name.Substring("EchoScan_".Length);
+            Material original = FindMineMaterial(baseName);
+
+            if (original == null)
+            {
+                Debug.LogWarning($"Could not find original mine material for {echoMaterial.name}.");
+                continue;
+            }
+
+            entries.Add(new EchoMaterialCatalog.Entry
+            {
+                echoMaterial = echoMaterial,
+                originalMaterial = GetOrCreateLitMaterial(original)
+            });
+        }
+
+        catalog.entries = entries.ToArray();
+        EditorUtility.SetDirty(catalog);
+        AssetDatabase.SaveAssets();
+
+        Debug.Log($"Echo material catalog built with {entries.Count} URP Lit mapping(s).");
+    }
+
+    [MenuItem("Tools/Echo Scan/Build URP Lit Materials")]
+    public static void BuildUrpLitMaterials()
+    {
+        BuildMaterialCatalog();
+    }
+
+    [MenuItem("Tools/Echo Scan/Regenerate Resources Lit Materials (Quest)")]
+    public static void RegenerateResourcesLitMaterials()
+    {
+        string scriptPath = $"{Application.dataPath}/Editor/GenerateEchoLitMaterials.py";
+
+        if (!System.IO.File.Exists(scriptPath))
+        {
+            Debug.LogError("GenerateEchoLitMaterials.py not found.");
+            return;
+        }
+
+        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
+        {
+            FileName = "python3",
+            Arguments = $"\"{scriptPath}\"",
+            WorkingDirectory = Application.dataPath,
+            UseShellExecute = false,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true
+        };
+
+        using (System.Diagnostics.Process process = System.Diagnostics.Process.Start(startInfo))
+        {
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+            process.WaitForExit();
+
+            if (!string.IsNullOrEmpty(output))
+            {
+                Debug.Log(output);
+            }
+
+            if (!string.IsNullOrEmpty(error))
+            {
+                Debug.LogError(error);
+            }
+        }
+
+        AssetDatabase.Refresh();
+        WireLightingController();
+    }
+
+    [MenuItem("Tools/Echo Scan/Wire Lighting Controller On EchoSystem")]
+    public static void WireLightingController()
+    {
+        EchoLightingController lighting = Object.FindFirstObjectByType<EchoLightingController>();
+
+        if (lighting == null)
+        {
+            EchoPulseController pulse = Object.FindFirstObjectByType<EchoPulseController>();
+
+            if (pulse == null)
+            {
+                Debug.LogWarning("No EchoPulseController found in the scene.");
+                return;
+            }
+
+            lighting = pulse.gameObject.AddComponent<EchoLightingController>();
+        }
+
+        EchoMaterialCatalog catalog = AssetDatabase.LoadAssetAtPath<EchoMaterialCatalog>(
+            "Assets/Resources/EchoMaterialCatalog.asset"
+        );
+
+        if (catalog == null)
+        {
+            BuildMaterialCatalog();
+            catalog = AssetDatabase.LoadAssetAtPath<EchoMaterialCatalog>(
+                "Assets/Resources/EchoMaterialCatalog.asset"
+            );
+        }
+
+        lighting.materialCatalog = catalog;
+        EditorUtility.SetDirty(lighting);
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+
+        Debug.Log("EchoLightingController wired to EchoMaterialCatalog.");
+    }
+
+    static Material FindMineMaterial(string materialName)
+    {
+        string[] guids = AssetDatabase.FindAssets($"{materialName} t:Material", new[] { "Assets/Mine" });
+
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            Material material = AssetDatabase.LoadAssetAtPath<Material>(path);
+
+            if (material != null && material.name == materialName)
+            {
+                return material;
+            }
+        }
+
+        return null;
     }
 
     [MenuItem("Tools/Echo Scan/Add VR Floor To Mine Scene")]
@@ -281,6 +452,58 @@ public static class EchoScanSetupEditor
         AssetDatabase.SaveAssets();
 
         return echoMaterial;
+    }
+
+    static Material GetOrCreateLitMaterial(Material source)
+    {
+        EnsureLitFolder();
+
+        string safeName = source.name.Replace(" ", "_");
+        string assetPath = $"{LitFolder}/Lit_{safeName}.mat";
+        Shader litShader = Shader.Find("Universal Render Pipeline/Lit");
+
+        if (litShader == null)
+        {
+            Debug.LogError("URP Lit shader not found.");
+            return source;
+        }
+
+        Material existing = AssetDatabase.LoadAssetAtPath<Material>(assetPath);
+
+        if (existing != null)
+        {
+            existing.shader = litShader;
+            EchoLitMaterialUtility.CopyStandardToLit(source, existing);
+            EditorUtility.SetDirty(existing);
+            return existing;
+        }
+
+        Material litMaterial = new Material(litShader)
+        {
+            name = $"Lit_{safeName}"
+        };
+
+        EchoLitMaterialUtility.CopyStandardToLit(source, litMaterial);
+
+        AssetDatabase.CreateAsset(litMaterial, assetPath);
+        AssetDatabase.SaveAssets();
+
+        return litMaterial;
+    }
+
+    static void EnsureLitFolder()
+    {
+        if (AssetDatabase.IsValidFolder(LitFolder))
+        {
+            return;
+        }
+
+        if (!AssetDatabase.IsValidFolder("Assets/Materials"))
+        {
+            AssetDatabase.CreateFolder("Assets", "Materials");
+        }
+
+        AssetDatabase.CreateFolder("Assets/Materials", "EchoLitGenerated");
     }
 
     static void EnsureFolder(string path)

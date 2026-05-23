@@ -4199,10 +4199,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: EchoSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 7123456789012345679, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: toggleKey
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123456789012345679, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: controlLanternLights
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101529557343479839, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: Spatialize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101529557343479839, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 03d4f07283ae4307b8c7a2ea7ad08068, type: 2}
+    - target: {fileID: 9101529557343479839, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      propertyPath: SpatializePostEffects
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6187223896786712886, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005481337}
   m_SourcePrefab: {fileID: 100100000, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
 --- !u!1001 &966499217
 PrefabInstance:
@@ -8008,6 +8031,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
   m_PrefabInstance: {fileID: 1996805133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2005481330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6187223896786712886, guid: b142a231683ba4e21b1f77a9da4b815b, type: 3}
+  m_PrefabInstance: {fileID: 953723447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2005481337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005481330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f270ac36c49789466c75ceb88424c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Meta.XR.Audio::MetaXRAudioSource
+  enableSpatialization: 1
+  gainBoostDb: 0
+  enableAcoustics: 1
+  reverbSendDb: 0
 --- !u!1001 &2054223227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8343,6 +8387,61 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+--- !u!1 &2125130781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125130783}
+  - component: {fileID: 2125130782}
+  m_Layer: 0
+  m_Name: RoomAcoustics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2125130782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125130781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3115f71c5841078600752259d33fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Meta.XR.Audio::MetaXRAudioRoomAcousticProperties
+  lockPositionToListener: 0
+  width: 4
+  height: 20
+  depth: 20
+  leftMaterial: 28
+  rightMaterial: 28
+  ceilingMaterial: 28
+  floorMaterial: 28
+  frontMaterial: 28
+  backMaterial: 28
+  clutterFactor: 0.888
+--- !u!4 &2125130783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125130781}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.54, y: 8.66, z: -4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2132609205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8518,3 +8617,4 @@ SceneRoots:
   - {fileID: 1663316550}
   - {fileID: 953723447}
   - {fileID: 334739222}
+  - {fileID: 2125130783}

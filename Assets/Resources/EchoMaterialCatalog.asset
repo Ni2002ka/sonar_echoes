@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f2c4a61b9d34e7f8a1c2d3e4f5a6b7, type: 3}
+  m_Name: EchoMaterialCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::EchoMaterialCatalog
+  entries:
+  - echoMaterial: {fileID: 2100000, guid: 89436a3ab71374d36a695c0d38692d5c, type: 2}
+    originalMaterial: {fileID: 2100000, guid: bf6c4902dd27467b817b5a39c427854e, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: 0a38a91057de0464384192a65f5fdc2c, type: 2}
+    originalMaterial: {fileID: 2100000, guid: e07c25f3f75041238804250af146a5fc, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: 5f7e225d04b5448d8afde6b955393b5d, type: 2}
+    originalMaterial: {fileID: 2100000, guid: cf56efb701a74d85b3b97461d1e19852, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: f9d0793e00113451195e01477eac89d4, type: 2}
+    originalMaterial: {fileID: 2100000, guid: db808fafbf1e47208332354a0b92222c, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: eef46d296b93d41e39e6e98d3ffc8e7f, type: 2}
+    originalMaterial: {fileID: 2100000, guid: 17bedf467c7c428d921def3bde09514a, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: ebe528b3a8927427a887199f48d2c0eb, type: 2}
+    originalMaterial: {fileID: 2100000, guid: 8a5321e26f18488fb7aead1b41d05a21, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: eda934073458f444985f6b1aaaabf619, type: 2}
+    originalMaterial: {fileID: 2100000, guid: fa3a2ab390ba4a15aca16b12956dd368, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: 3f7d69513068a430d94d5f4c44b47d7f, type: 2}
+    originalMaterial: {fileID: 2100000, guid: 4afd9ddcb09045ac90cfee22aa0447a5, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: d7d136accbf1245e28c46991d5cb5888, type: 2}
+    originalMaterial: {fileID: 2100000, guid: a1d71bc3326248daa83d883e2c7a3eef, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: 62f4d1da57ccd44e4ad903151a479d0e, type: 2}
+    originalMaterial: {fileID: 2100000, guid: 991c77498fae4aa4a340390a60fbf47b, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: 18d2ed5ddec2d49a8808c3b204ef0f3f, type: 2}
+    originalMaterial: {fileID: 2100000, guid: 516a60c5315047f7b6c82c9b30018f69, type: 2}
+  - echoMaterial: {fileID: 2100000, guid: ee5b307262f704362a87112a1e315ff5, type: 2}
+    originalMaterial: {fileID: 2100000, guid: ccbb134a38274d3cbe419051ac1ef400, type: 2}

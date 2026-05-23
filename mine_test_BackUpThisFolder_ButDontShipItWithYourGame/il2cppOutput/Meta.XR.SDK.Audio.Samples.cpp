@@ -367,7 +367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 96854
+// Method Definition Index: 96873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirstPersonControl_Update_mB7DF2A804375CA169C47D7FCDAA81D70FEB44ECA (FirstPersonControl_tEFD5AE6AA91ABF0673319F5AF33B81F202322905* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -454,7 +454,7 @@ IL_00b9:
 		return;
 	}
 }
-// Method Definition Index: 96855
+// Method Definition Index: 96874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirstPersonControl__ctor_mBE832E3A3B6C24FE38D1DE93E78104018D7247D3 (FirstPersonControl_tEFD5AE6AA91ABF0673319F5AF33B81F202322905* __this, const RuntimeMethod* method) 
 {
 	{
@@ -476,7 +476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirstPersonControl__ctor_mBE832E3A3B6C24
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 96856
+// Method Definition Index: 96875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RepeatSound_Start_mFDB9F5FE111D45CE0D82BA274418B7E9D10920E8 (RepeatSound_tBE68885379FEC7B4D31205118DA3FF64A775A480* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -495,7 +495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RepeatSound_Start_mFDB9F5FE111D45CE0D82B
 		return;
 	}
 }
-// Method Definition Index: 96857
+// Method Definition Index: 96876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RepeatSound_Update_m93CAA34FC1D50A0E46F72D2ECF28F0DC72A2C5F6 (RepeatSound_tBE68885379FEC7B4D31205118DA3FF64A775A480* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -634,7 +634,7 @@ IL_0148:
 		return;
 	}
 }
-// Method Definition Index: 96858
+// Method Definition Index: 96877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RepeatSound__ctor_mDCBA0D6159A9D89BD7C258740955DD16F203A01F (RepeatSound_tBE68885379FEC7B4D31205118DA3FF64A775A480* __this, const RuntimeMethod* method) 
 {
 	{
@@ -666,7 +666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RepeatSound__ctor_mDCBA0D6159A9D89BD7C25
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 96859
+// Method Definition Index: 96878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t6E967F131A9A0EB30597CAC07CAF8E2A4E7862A8 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m01D0C152AFC254B3045BA5A9CAD862E61E256B9F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -709,7 +709,7 @@ IL_005a:
 		return L_7;
 	}
 }
-// Method Definition Index: 96860
+// Method Definition Index: 96879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mA99A65643065A8C5299B7AACED765B1AE432BF05 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t1B72E6042CAF2A09D6F64DC710289A099CABA20B* __this, const RuntimeMethod* method) 
 {
 	{

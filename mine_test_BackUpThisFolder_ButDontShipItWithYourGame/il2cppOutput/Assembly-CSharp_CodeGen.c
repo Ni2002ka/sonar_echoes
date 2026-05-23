@@ -65,6 +65,15 @@ extern void U3CScanRoutineU3Ed__28_MoveNext_mB9F0076F462E41E33F28E0D4A6FCF959185
 extern void U3CScanRoutineU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m254C94E5EBA5FD848E54016D4BCF88B1DA414181 (void);
 extern void U3CScanRoutineU3Ed__28_System_Collections_IEnumerator_Reset_m09529F50C95057D78D4D8219415B428DCBD4046A (void);
 extern void U3CScanRoutineU3Ed__28_System_Collections_IEnumerator_get_Current_m8030DADB0428EDEBBD115512DD386FB086722A6F (void);
+extern void EchoVRLocomotion_Start_m7B686C6E85B17B9BE0602CD3660E1A6796F0583A (void);
+extern void EchoVRLocomotion_Update_mF65F63734F4943E496EA12698863C9CFB6BE4610 (void);
+extern void EchoVRLocomotion_ReadHorizontalInput_m3BA5C6DA676E1AEF507FC3B4E5E08310CA98F1C2 (void);
+extern void EchoVRLocomotion_ReadVerticalInput_m67B592F58DC7C903E8074B18C663FFD43C5C942F (void);
+extern void EchoVRLocomotion_GetRightThumbstick_m532AE647037F4E24B2F1473DC89BE1587D3B1B09 (void);
+extern void EchoVRLocomotion_GetLeftThumbstickVertical_m888D53F454647C6C527FC59F7B8AD32A402F18F4 (void);
+extern void EchoVRLocomotion_GetKeyboardHorizontal_m204D6D62E88A97971D63E084F1122763BF3144BB (void);
+extern void EchoVRLocomotion_GetKeyboardVertical_m2274F4CC40C785F24A8D36BAC32F3F70E622A2F4 (void);
+extern void EchoVRLocomotion__ctor_mFF9C521620D851759879FD6FB43042EBDCB29749 (void);
 extern void SimpleEcho_Start_mE4051DB3638EE9AC7DAE7F4E2ED20FA7C7531088 (void);
 extern void SimpleEcho_Update_mD3AABCF1D89964619C2FBA32BFC9D89F5A8637EE (void);
 extern void SimpleEcho_EmitEchoPulse_mA66866B682405FCFD1D107BA785FF35FD8D01A02 (void);
@@ -88,7 +97,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[81] = 
+static Il2CppMethodPointer s_methodPointers[90] = 
 {
 	EchoLightingController_Awake_mA90F8FF60AF2FC184431F50E83A9C6FE611F88E8,
 	EchoLightingController_Update_m8FA546073F6897634156A4D03171876DF0493564,
@@ -148,6 +157,15 @@ static Il2CppMethodPointer s_methodPointers[81] =
 	U3CScanRoutineU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m254C94E5EBA5FD848E54016D4BCF88B1DA414181,
 	U3CScanRoutineU3Ed__28_System_Collections_IEnumerator_Reset_m09529F50C95057D78D4D8219415B428DCBD4046A,
 	U3CScanRoutineU3Ed__28_System_Collections_IEnumerator_get_Current_m8030DADB0428EDEBBD115512DD386FB086722A6F,
+	EchoVRLocomotion_Start_m7B686C6E85B17B9BE0602CD3660E1A6796F0583A,
+	EchoVRLocomotion_Update_mF65F63734F4943E496EA12698863C9CFB6BE4610,
+	EchoVRLocomotion_ReadHorizontalInput_m3BA5C6DA676E1AEF507FC3B4E5E08310CA98F1C2,
+	EchoVRLocomotion_ReadVerticalInput_m67B592F58DC7C903E8074B18C663FFD43C5C942F,
+	EchoVRLocomotion_GetRightThumbstick_m532AE647037F4E24B2F1473DC89BE1587D3B1B09,
+	EchoVRLocomotion_GetLeftThumbstickVertical_m888D53F454647C6C527FC59F7B8AD32A402F18F4,
+	EchoVRLocomotion_GetKeyboardHorizontal_m204D6D62E88A97971D63E084F1122763BF3144BB,
+	EchoVRLocomotion_GetKeyboardVertical_m2274F4CC40C785F24A8D36BAC32F3F70E622A2F4,
+	EchoVRLocomotion__ctor_mFF9C521620D851759879FD6FB43042EBDCB29749,
 	SimpleEcho_Start_mE4051DB3638EE9AC7DAE7F4E2ED20FA7C7531088,
 	SimpleEcho_Update_mD3AABCF1D89964619C2FBA32BFC9D89F5A8637EE,
 	SimpleEcho_EmitEchoPulse_mA66866B682405FCFD1D107BA785FF35FD8D01A02,
@@ -172,7 +190,7 @@ static Il2CppMethodPointer s_methodPointers[81] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[81] = 
+static const int32_t s_InvokerIndices[90] = 
 {
 	20211,
 	20211,
@@ -234,6 +252,15 @@ static const int32_t s_InvokerIndices[81] =
 	20002,
 	20211,
 	20211,
+	20199,
+	20111,
+	34421,
+	34382,
+	34421,
+	34382,
+	20211,
+	20211,
+	20211,
 	20211,
 	2999,
 	3009,
@@ -260,7 +287,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	81,
+	90,
 	s_methodPointers,
 	0,
 	NULL,

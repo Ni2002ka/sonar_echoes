@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5189249618257727431}
   - component: {fileID: 5873103232946369479}
   - component: {fileID: 7123456789012345679}
+  - component: {fileID: 8234567890123456780}
   m_Layer: 0
   m_Name: EchoSystem
   m_TagString: Untagged
@@ -224,3 +225,21 @@ MonoBehaviour:
   lightsOn: 0
   toggleKey: 108
   controlLanternLights: 1
+--- !u!114 &8234567890123456780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187223896786712886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e4f2a91c3d54e6a9b7c8d0e1f2a3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EchoVRLocomotion
+  playerRig: {fileID: 0}
+  head: {fileID: 0}
+  moveSpeed: 2.5
+  verticalSpeed: 2.5
+  deadzone: 0.15
+  useCharacterController: 1

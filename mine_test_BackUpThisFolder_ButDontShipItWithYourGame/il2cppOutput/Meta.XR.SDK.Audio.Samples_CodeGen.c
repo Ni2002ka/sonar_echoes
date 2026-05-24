@@ -26,13 +26,13 @@ static Il2CppMethodPointer s_methodPointers[7] =
 };
 static const int32_t s_InvokerIndices[7] = 
 {
-	20211,
-	20211,
-	20211,
-	20211,
-	20211,
+	20212,
+	20212,
+	20212,
+	20212,
+	20212,
 	34475,
-	20211,
+	20212,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Meta_XR_SDK_Audio_Samples_CodeGenModule;
 const Il2CppCodeGenModule g_Meta_XR_SDK_Audio_Samples_CodeGenModule = 

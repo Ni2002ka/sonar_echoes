@@ -7,6 +7,22 @@
 
 
 
+extern void EchoIntensityHudView_Initialize_m4070B8CF252B942E2AE04CEA47AF150FB1B084D4 (void);
+extern void EchoIntensityHudView_NotifyAdjusting_mF5DA6BC9557B675E47E77243E561C624F6113FB6 (void);
+extern void EchoIntensityHudView_BuildHud_mA4E8ADD2BA9598B06123BD0574DFF166B546F0F1 (void);
+extern void EchoIntensityHudView_BuildLineHud_m1E7C73DB5A5A0C915EF366B0402AD9E135EE5712 (void);
+extern void EchoIntensityHudView_CreateLineRenderer_mF25AFB240E6238B3A8CFF50F6D35693A5E824A18 (void);
+extern void EchoIntensityHudView_LateUpdate_m989308DC875A28706FA73BB822B712FF1CD5E23D (void);
+extern void EchoIntensityHudView_UpdateFillLine_m5CA109DE89C83F99444198D61F32AC2C954BB41D (void);
+extern void EchoIntensityHudView_ApplyAlpha_m423D9BE945A47609B0CCE17912539D8C07AC07E9 (void);
+extern void EchoIntensityHudView_GetHudMaterial_mD278D0E46900A5FCEC250950EEFF1F254191BF2E (void);
+extern void EchoIntensityHudView__ctor_m4B3882C7A445D355B27E4382D722093CF726B577 (void);
+extern void U3CBuildHudU3Ed__18__ctor_m41049275CA7164CD0FEE6D57500E6507783A94D9 (void);
+extern void U3CBuildHudU3Ed__18_System_IDisposable_Dispose_mCA45C59E3072677C54F6543442B83BFAC8005CE7 (void);
+extern void U3CBuildHudU3Ed__18_MoveNext_m0549CC45C726F52547C205C1FDA73121C04FF066 (void);
+extern void U3CBuildHudU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2EA73307E75FFA8974DB6E6E1AB8737CA16E3285 (void);
+extern void U3CBuildHudU3Ed__18_System_Collections_IEnumerator_Reset_m116F98F952F6623A4993642E8CB1008E5224C36F (void);
+extern void U3CBuildHudU3Ed__18_System_Collections_IEnumerator_get_Current_m6BD66AF08DB4DC26784229674457F66CA6D79ABF (void);
 extern void EchoLightingController_Awake_mA90F8FF60AF2FC184431F50E83A9C6FE611F88E8 (void);
 extern void EchoLightingController_Update_m8FA546073F6897634156A4D03171876DF0493564 (void);
 extern void EchoLightingController_SetLightsOn_mF6145EB9E7B37AC00E27ED101E68DBDA41593276 (void);
@@ -27,10 +43,25 @@ extern void EchoLitMaterialUtility__cctor_m69F9FE08245CEA58D3858BDEF08A710B6E0C0
 extern void EchoMaterialCatalog_TryGetOriginal_mB3534DDA12DEA16FFD965C7049331446E8EAD256 (void);
 extern void EchoMaterialCatalog__ctor_m6272BF7ABFC5ACC257B95B3B314DB755AD30BB32 (void);
 extern void EchoPulseController_Start_mE01D76254D24DCAEC44D0C30F5F16F8B8B2195C1 (void);
+extern void EchoPulseController_EnsureIntensityHud_mD39FC95015245EDB662C97C028EE4F0B06A444D0 (void);
 extern void EchoPulseController_Update_m8AA2D99D45EA7802F41EFFE916CED9068A83E2CA (void);
+extern void EchoPulseController_ApplyOriginalBeamIntensityAdjustment_mC240E5065B187ED4E87E98692721EE463AB22554 (void);
+extern void EchoPulseController_GetVrIntensityStep_m09D904A5CD1E1B78C422E496C34C52F5E195DCD8 (void);
+extern void EchoPulseController_GetVrIntensityDelta_mA2E2128D7669907DCF2EFDCDA531F8BF0D0B1CB2 (void);
+extern void EchoPulseController_GetOvrButton_m4A7F1BDB6618B825B7049EDD4E52367CAB6D9630 (void);
 extern void EchoPulseController_GetOvrButtonDown_m7446E22CCF1B26B2A08F83BEEF63A980754CDF16 (void);
-extern void EchoPulseController_WasKeyPressed_m958A8F3464A82125DBA42387CA1017357BFA5EAA (void);
-extern void EchoPulseController_KeyCodeToKey_m78B74BE5C71FB276F1D7C408050036373C03903F (void);
+extern void EchoPulseController_ResolveHead_m5F3391EFC774964723606B2AE1D1DBE12B1FEDCE (void);
+extern void EchoPulseController_ConfigurePulseAudioSource_m5C1F4E7453609570A2EB34AAAA86F92DC82DB3FE (void);
+extern void EchoPulseController_EnsureAudioListenerOnHead_m9BC4F65BA4C4A7778C121B57FF9A1FCA3476B41A (void);
+extern void EchoPulseController_DisableMetaXrAudioComponents_mCAC9E04181067235FD914A3D9EC9F1B82C3884D7 (void);
+extern void EchoPulseController_UseEditorFriendlyEcho_m4C4269047FDB2783CED2F65B6819E9DAAD1D862C (void);
+extern void EchoPulseController_EnsureKeyboardDevice_mBFFA049F6898161BE3813FE2C4D813D32B1697D0 (void);
+extern void EchoPulseController_WasFirePressed_m93CFC778A8458B35DD816EEDFA38B1CFA43BEC9E (void);
+extern void EchoPulseController_GetKeyboardIntensityStep_m39421781AF0929C75E6BADD501A99D4F002946ED (void);
+extern void EchoPulseController_GetKeyboardIntensityDelta_mC15389291A66D4C1245365D547D08FAF5AEED2F6 (void);
+extern void EchoPulseController_GetScrollIntensityDelta_m2F929606284791D217493636204BBCB9081E6E7B (void);
+extern void EchoPulseController_IsKeyHeld_m0DBB7E8E640508071F7668207AC1A906A0F86EBB (void);
+extern void EchoPulseController_IsKeyPressedThisFrame_m19B6C6FC4D7B5F36A1643E5C19F1D6FB94800EF6 (void);
 extern void EchoPulseController_FireScanner_m61C59C557D818AC79A8BD6D42B43FF2A3941DC43 (void);
 extern void EchoPulseController_CastConeGrid_m2A6FC9B9258E50B79D444D72853BFE5A9238DAFF (void);
 extern void EchoPulseController_GetGridConeDirection_m7E895A7FD4FB7E3DF5123E3961DFF67F4A188E42 (void);
@@ -39,12 +70,12 @@ extern void EchoPulseController_PlayEchoesFromHits_mACA9BBB9D323C6004A4D695E6084
 extern void EchoPulseController_CalculateEchoDelay_m5D3158CAA1533E50E8EEC41DE8DF840F4ED58803 (void);
 extern void EchoPulseController_PlayEchoAfterDelay_m7D6D7AA61B6EB3BDE5DFD7880B92EBF7EA8B0B0C (void);
 extern void EchoPulseController__ctor_m24FC9965BB3DF5EC8BFF4270C58DB5E5B5606CC0 (void);
-extern void U3CPlayEchoAfterDelayU3Ed__24__ctor_m26E078CB3954985940128A30FE7BD8D39C0252B5 (void);
-extern void U3CPlayEchoAfterDelayU3Ed__24_System_IDisposable_Dispose_mE5DF6F65F2227E978AA0375DE16FA36057A29D84 (void);
-extern void U3CPlayEchoAfterDelayU3Ed__24_MoveNext_mB61F4E159582A9826B1F1B7ABAE79B934A65375E (void);
-extern void U3CPlayEchoAfterDelayU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFB19F7786177E19822F6C8AC8A453B1C03349001 (void);
-extern void U3CPlayEchoAfterDelayU3Ed__24_System_Collections_IEnumerator_Reset_m25118C6EC3E1416080769BA203EFFF3D0EB00C19 (void);
-extern void U3CPlayEchoAfterDelayU3Ed__24_System_Collections_IEnumerator_get_Current_mAC5E32CF0859DB552FA1B3EE615DEBFF3A2CE89A (void);
+extern void U3CPlayEchoAfterDelayU3Ed__45__ctor_mC38F13EC280C65B0D9857063BB05FA821A5E9514 (void);
+extern void U3CPlayEchoAfterDelayU3Ed__45_System_IDisposable_Dispose_m2B54BCDD094096218018B652ADBCD40228E002C4 (void);
+extern void U3CPlayEchoAfterDelayU3Ed__45_MoveNext_mA6EC414D72D7AB116FCFB9DA8C1CE5CC21A1CF57 (void);
+extern void U3CPlayEchoAfterDelayU3Ed__45_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mBA098E024C7A73A18403EEEF9A121F7814807CEE (void);
+extern void U3CPlayEchoAfterDelayU3Ed__45_System_Collections_IEnumerator_Reset_mBE455DEA7F48E8F980A589C6199007CFBCC2DBE1 (void);
+extern void U3CPlayEchoAfterDelayU3Ed__45_System_Collections_IEnumerator_get_Current_mF985D704E3C2D84A97BC7CC76D57D0F047612AC9 (void);
 extern void EchoSegmentShaderScanner_StartScan_m9D4E05F5A57A3F5244D72F9CFB374B54CEDBED41 (void);
 extern void EchoSegmentShaderScanner_ScanRoutine_m8888F82851E22ECDFBD8713A6C81AA9C326D4270 (void);
 extern void EchoSegmentShaderScanner_RefreshScanMaterials_mF72046264BFA461A41EC562EB557DEFBB8001C28 (void);
@@ -97,8 +128,24 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[90] = 
+static Il2CppMethodPointer s_methodPointers[121] = 
 {
+	EchoIntensityHudView_Initialize_m4070B8CF252B942E2AE04CEA47AF150FB1B084D4,
+	EchoIntensityHudView_NotifyAdjusting_mF5DA6BC9557B675E47E77243E561C624F6113FB6,
+	EchoIntensityHudView_BuildHud_mA4E8ADD2BA9598B06123BD0574DFF166B546F0F1,
+	EchoIntensityHudView_BuildLineHud_m1E7C73DB5A5A0C915EF366B0402AD9E135EE5712,
+	EchoIntensityHudView_CreateLineRenderer_mF25AFB240E6238B3A8CFF50F6D35693A5E824A18,
+	EchoIntensityHudView_LateUpdate_m989308DC875A28706FA73BB822B712FF1CD5E23D,
+	EchoIntensityHudView_UpdateFillLine_m5CA109DE89C83F99444198D61F32AC2C954BB41D,
+	EchoIntensityHudView_ApplyAlpha_m423D9BE945A47609B0CCE17912539D8C07AC07E9,
+	EchoIntensityHudView_GetHudMaterial_mD278D0E46900A5FCEC250950EEFF1F254191BF2E,
+	EchoIntensityHudView__ctor_m4B3882C7A445D355B27E4382D722093CF726B577,
+	U3CBuildHudU3Ed__18__ctor_m41049275CA7164CD0FEE6D57500E6507783A94D9,
+	U3CBuildHudU3Ed__18_System_IDisposable_Dispose_mCA45C59E3072677C54F6543442B83BFAC8005CE7,
+	U3CBuildHudU3Ed__18_MoveNext_m0549CC45C726F52547C205C1FDA73121C04FF066,
+	U3CBuildHudU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2EA73307E75FFA8974DB6E6E1AB8737CA16E3285,
+	U3CBuildHudU3Ed__18_System_Collections_IEnumerator_Reset_m116F98F952F6623A4993642E8CB1008E5224C36F,
+	U3CBuildHudU3Ed__18_System_Collections_IEnumerator_get_Current_m6BD66AF08DB4DC26784229674457F66CA6D79ABF,
 	EchoLightingController_Awake_mA90F8FF60AF2FC184431F50E83A9C6FE611F88E8,
 	EchoLightingController_Update_m8FA546073F6897634156A4D03171876DF0493564,
 	EchoLightingController_SetLightsOn_mF6145EB9E7B37AC00E27ED101E68DBDA41593276,
@@ -119,10 +166,25 @@ static Il2CppMethodPointer s_methodPointers[90] =
 	EchoMaterialCatalog_TryGetOriginal_mB3534DDA12DEA16FFD965C7049331446E8EAD256,
 	EchoMaterialCatalog__ctor_m6272BF7ABFC5ACC257B95B3B314DB755AD30BB32,
 	EchoPulseController_Start_mE01D76254D24DCAEC44D0C30F5F16F8B8B2195C1,
+	EchoPulseController_EnsureIntensityHud_mD39FC95015245EDB662C97C028EE4F0B06A444D0,
 	EchoPulseController_Update_m8AA2D99D45EA7802F41EFFE916CED9068A83E2CA,
+	EchoPulseController_ApplyOriginalBeamIntensityAdjustment_mC240E5065B187ED4E87E98692721EE463AB22554,
+	EchoPulseController_GetVrIntensityStep_m09D904A5CD1E1B78C422E496C34C52F5E195DCD8,
+	EchoPulseController_GetVrIntensityDelta_mA2E2128D7669907DCF2EFDCDA531F8BF0D0B1CB2,
+	EchoPulseController_GetOvrButton_m4A7F1BDB6618B825B7049EDD4E52367CAB6D9630,
 	EchoPulseController_GetOvrButtonDown_m7446E22CCF1B26B2A08F83BEEF63A980754CDF16,
-	EchoPulseController_WasKeyPressed_m958A8F3464A82125DBA42387CA1017357BFA5EAA,
-	EchoPulseController_KeyCodeToKey_m78B74BE5C71FB276F1D7C408050036373C03903F,
+	EchoPulseController_ResolveHead_m5F3391EFC774964723606B2AE1D1DBE12B1FEDCE,
+	EchoPulseController_ConfigurePulseAudioSource_m5C1F4E7453609570A2EB34AAAA86F92DC82DB3FE,
+	EchoPulseController_EnsureAudioListenerOnHead_m9BC4F65BA4C4A7778C121B57FF9A1FCA3476B41A,
+	EchoPulseController_DisableMetaXrAudioComponents_mCAC9E04181067235FD914A3D9EC9F1B82C3884D7,
+	EchoPulseController_UseEditorFriendlyEcho_m4C4269047FDB2783CED2F65B6819E9DAAD1D862C,
+	EchoPulseController_EnsureKeyboardDevice_mBFFA049F6898161BE3813FE2C4D813D32B1697D0,
+	EchoPulseController_WasFirePressed_m93CFC778A8458B35DD816EEDFA38B1CFA43BEC9E,
+	EchoPulseController_GetKeyboardIntensityStep_m39421781AF0929C75E6BADD501A99D4F002946ED,
+	EchoPulseController_GetKeyboardIntensityDelta_mC15389291A66D4C1245365D547D08FAF5AEED2F6,
+	EchoPulseController_GetScrollIntensityDelta_m2F929606284791D217493636204BBCB9081E6E7B,
+	EchoPulseController_IsKeyHeld_m0DBB7E8E640508071F7668207AC1A906A0F86EBB,
+	EchoPulseController_IsKeyPressedThisFrame_m19B6C6FC4D7B5F36A1643E5C19F1D6FB94800EF6,
 	EchoPulseController_FireScanner_m61C59C557D818AC79A8BD6D42B43FF2A3941DC43,
 	EchoPulseController_CastConeGrid_m2A6FC9B9258E50B79D444D72853BFE5A9238DAFF,
 	EchoPulseController_GetGridConeDirection_m7E895A7FD4FB7E3DF5123E3961DFF67F4A188E42,
@@ -131,12 +193,12 @@ static Il2CppMethodPointer s_methodPointers[90] =
 	EchoPulseController_CalculateEchoDelay_m5D3158CAA1533E50E8EEC41DE8DF840F4ED58803,
 	EchoPulseController_PlayEchoAfterDelay_m7D6D7AA61B6EB3BDE5DFD7880B92EBF7EA8B0B0C,
 	EchoPulseController__ctor_m24FC9965BB3DF5EC8BFF4270C58DB5E5B5606CC0,
-	U3CPlayEchoAfterDelayU3Ed__24__ctor_m26E078CB3954985940128A30FE7BD8D39C0252B5,
-	U3CPlayEchoAfterDelayU3Ed__24_System_IDisposable_Dispose_mE5DF6F65F2227E978AA0375DE16FA36057A29D84,
-	U3CPlayEchoAfterDelayU3Ed__24_MoveNext_mB61F4E159582A9826B1F1B7ABAE79B934A65375E,
-	U3CPlayEchoAfterDelayU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFB19F7786177E19822F6C8AC8A453B1C03349001,
-	U3CPlayEchoAfterDelayU3Ed__24_System_Collections_IEnumerator_Reset_m25118C6EC3E1416080769BA203EFFF3D0EB00C19,
-	U3CPlayEchoAfterDelayU3Ed__24_System_Collections_IEnumerator_get_Current_mAC5E32CF0859DB552FA1B3EE615DEBFF3A2CE89A,
+	U3CPlayEchoAfterDelayU3Ed__45__ctor_mC38F13EC280C65B0D9857063BB05FA821A5E9514,
+	U3CPlayEchoAfterDelayU3Ed__45_System_IDisposable_Dispose_m2B54BCDD094096218018B652ADBCD40228E002C4,
+	U3CPlayEchoAfterDelayU3Ed__45_MoveNext_mA6EC414D72D7AB116FCFB9DA8C1CE5CC21A1CF57,
+	U3CPlayEchoAfterDelayU3Ed__45_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mBA098E024C7A73A18403EEEF9A121F7814807CEE,
+	U3CPlayEchoAfterDelayU3Ed__45_System_Collections_IEnumerator_Reset_mBE455DEA7F48E8F980A589C6199007CFBCC2DBE1,
+	U3CPlayEchoAfterDelayU3Ed__45_System_Collections_IEnumerator_get_Current_mF985D704E3C2D84A97BC7CC76D57D0F047612AC9,
 	EchoSegmentShaderScanner_StartScan_m9D4E05F5A57A3F5244D72F9CFB374B54CEDBED41,
 	EchoSegmentShaderScanner_ScanRoutine_m8888F82851E22ECDFBD8713A6C81AA9C326D4270,
 	EchoSegmentShaderScanner_RefreshScanMaterials_mF72046264BFA461A41EC562EB557DEFBB8001C28,
@@ -190,104 +252,135 @@ static Il2CppMethodPointer s_methodPointers[90] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[90] = 
+static const int32_t s_InvokerIndices[121] = 
 {
-	20211,
-	20211,
-	14891,
-	14891,
-	20211,
-	20211,
-	12802,
+	15098,
+	14892,
+	20003,
+	15098,
+	2974,
+	20212,
+	7670,
+	15202,
+	34327,
+	20212,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	20212,
+	20212,
+	14892,
+	14892,
+	20212,
+	20212,
+	12803,
 	31678,
 	31678,
 	31674,
 	31674,
-	20211,
+	20212,
 	32574,
 	31678,
 	32117,
-	28658,
+	28659,
 	34426,
-	4667,
-	20211,
-	20211,
-	20211,
+	4668,
+	20212,
+	20212,
+	20212,
+	20212,
+	20212,
+	20112,
+	34382,
 	31674,
 	31674,
-	29823,
-	20211,
-	6130,
-	2219,
-	5795,
-	7557,
-	12982,
-	2999,
-	20211,
-	15029,
-	20211,
-	19791,
-	20002,
-	20211,
-	20002,
-	3516,
-	3009,
-	20211,
-	15097,
-	15097,
-	20211,
-	34426,
-	20211,
-	15097,
-	15097,
-	20211,
-	15097,
-	20211,
-	15097,
-	15029,
-	20211,
-	19791,
-	20002,
-	20211,
-	20002,
-	20211,
-	20211,
-	20199,
-	20111,
-	34421,
-	34382,
-	34421,
-	34382,
-	20211,
-	20211,
-	20211,
-	20211,
-	2999,
-	3009,
+	20212,
+	20212,
+	20212,
+	20212,
 	34269,
-	20211,
-	15029,
-	20211,
-	19791,
-	20002,
-	20211,
-	20002,
-	15029,
-	20211,
-	19791,
-	20002,
-	20211,
-	20002,
-	20211,
-	20211,
+	34426,
+	34269,
+	20112,
+	34382,
+	20112,
+	31678,
+	31678,
+	20212,
+	6131,
+	2219,
+	5796,
+	7558,
+	12983,
+	3000,
+	20212,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	3517,
+	3010,
+	20212,
+	15098,
+	15098,
+	20212,
+	34426,
+	20212,
+	15098,
+	15098,
+	20212,
+	15098,
+	20212,
+	15098,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	20212,
+	20212,
+	20200,
+	20112,
+	34421,
+	34382,
+	34421,
+	34382,
+	20212,
+	20212,
+	20212,
+	20212,
+	3000,
+	3010,
+	34269,
+	20212,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	20212,
+	20212,
 	34468,
-	20211,
+	20212,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	90,
+	121,
 	s_methodPointers,
 	0,
 	NULL,

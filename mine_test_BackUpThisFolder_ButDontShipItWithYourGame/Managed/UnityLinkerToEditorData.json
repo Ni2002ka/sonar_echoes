@@ -85,26 +85,8 @@
             "icon": null
           },
           {
-            "name": "AudioMixer",
-            "scenes": [
-              "Assets/Mine/Example/Example.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
             "name": "AudioMixerGroup",
-            "scenes": [
-              "Assets/Mine/Example/Example.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
-            "name": "AudioMixerSnapshot",
-            "scenes": [
-              "Assets/Mine/Example/Example.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

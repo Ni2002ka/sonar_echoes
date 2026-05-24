@@ -181,6 +181,11 @@ MonoBehaviour:
   verticalRays: 12
   coneAngle: 20
   coneSoftness: 0.35
+  originalBeamIntensity: 1
+  intensityAdjustSpeed: 0.75
+  keyboardStepAmount: 0.1
+  scrollStepAmount: 0.08
+  showIntensityHud: 1
 --- !u!114 &5873103232946369479
 MonoBehaviour:
   m_ObjectHideFlags: 0

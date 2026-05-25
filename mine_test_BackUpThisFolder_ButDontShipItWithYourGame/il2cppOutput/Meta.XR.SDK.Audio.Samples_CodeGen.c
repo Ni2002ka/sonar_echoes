@@ -31,7 +31,7 @@ static const int32_t s_InvokerIndices[7] =
 	20212,
 	20212,
 	20212,
-	34475,
+	34478,
 	20212,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Meta_XR_SDK_Audio_Samples_CodeGenModule;

@@ -23,6 +23,8 @@ public class EchoLightingController : MonoBehaviour
     readonly List<RendererBinding> bindings = new List<RendererBinding>();
     readonly List<Light> lanternLights = new List<Light>();
     readonly List<bool> lanternLightStates = new List<bool>();
+    readonly List<MeshRenderer> lanternRenderers = new List<MeshRenderer>();
+    readonly List<ParticleSystem> lanternFlames = new List<ParticleSystem>();
 
     struct RendererBinding
     {
@@ -52,7 +54,7 @@ public class EchoLightingController : MonoBehaviour
         }
 
         CacheRenderers();
-        CacheLanternLights();
+        CacheLanterns();
         ApplyLightsState(lightsOn);
     }
 
@@ -114,6 +116,37 @@ public class EchoLightingController : MonoBehaviour
 
             light.enabled = enabled && lanternLightStates[i];
         }
+
+        for (int i = 0; i < lanternRenderers.Count; i++)
+        {
+            MeshRenderer renderer = lanternRenderers[i];
+
+            if (renderer != null)
+            {
+                renderer.enabled = enabled;
+            }
+        }
+
+        for (int i = 0; i < lanternFlames.Count; i++)
+        {
+            ParticleSystem flame = lanternFlames[i];
+
+            if (flame == null)
+            {
+                continue;
+            }
+
+            flame.gameObject.SetActive(enabled);
+
+            if (enabled)
+            {
+                flame.Play();
+            }
+            else
+            {
+                flame.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+        }
     }
 
     void CacheRenderers()
@@ -167,10 +200,12 @@ public class EchoLightingController : MonoBehaviour
         }
     }
 
-    void CacheLanternLights()
+    void CacheLanterns()
     {
         lanternLights.Clear();
         lanternLightStates.Clear();
+        lanternRenderers.Clear();
+        lanternFlames.Clear();
 
         Light[] lights = FindObjectsByType<Light>(FindObjectsSortMode.None);
 
@@ -181,20 +216,54 @@ public class EchoLightingController : MonoBehaviour
                 continue;
             }
 
-            Transform root = light.transform;
-
-            while (root != null)
+            if (IsUnderLantern(light.transform))
             {
-                if (root.name.Contains("Lantern"))
-                {
-                    lanternLights.Add(light);
-                    lanternLightStates.Add(light.enabled);
-                    break;
-                }
-
-                root = root.parent;
+                lanternLights.Add(light);
+                lanternLightStates.Add(light.enabled);
             }
         }
+
+        MeshRenderer[] renderers = FindObjectsByType<MeshRenderer>(FindObjectsSortMode.None);
+
+        foreach (MeshRenderer renderer in renderers)
+        {
+            if (renderer == null || ShouldSkipRenderer(renderer))
+            {
+                continue;
+            }
+
+            if (IsUnderLantern(renderer.transform))
+            {
+                lanternRenderers.Add(renderer);
+            }
+        }
+
+        ParticleSystem[] flames = FindObjectsByType<ParticleSystem>(FindObjectsSortMode.None);
+
+        foreach (ParticleSystem flame in flames)
+        {
+            if (flame != null && IsUnderLantern(flame.transform))
+            {
+                lanternFlames.Add(flame);
+            }
+        }
+    }
+
+    static bool IsUnderLantern(Transform transform)
+    {
+        Transform root = transform;
+
+        while (root != null)
+        {
+            if (root.name.Contains("Lantern"))
+            {
+                return true;
+            }
+
+            root = root.parent;
+        }
+
+        return false;
     }
 
     Material ResolveOriginalMaterial(Material echoMaterial)

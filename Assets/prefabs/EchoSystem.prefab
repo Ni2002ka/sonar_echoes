@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1618854549539659782}
   - component: {fileID: 9101529557343479839}
-  - component: {fileID: 4497833495519613536}
   - component: {fileID: 5189249618257727431}
   - component: {fileID: 5873103232946369479}
   - component: {fileID: 7123456789012345679}
@@ -134,27 +133,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4497833495519613536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6187223896786712886}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018021a991d5c42c583adb37878d3826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleEcho
-  head: {fileID: 0}
-  pulseClip: {fileID: 8300000, guid: 5b7442226dca54aecaf1e3725f320462, type: 3}
-  echoClip: {fileID: 8300000, guid: 5b7442226dca54aecaf1e3725f320462, type: 3}
-  maxDistance: 10
-  echoDelayMultiplier: 8
-  showCone: 1
-  coneAngle: 35
-  coneDuration: 0.25
-  coneMaterial: {fileID: 0}
 --- !u!114 &5189249618257727431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EchoSegmentShaderScanner
   scanMaterial: {fileID: 2100000, guid: d540f682046494c3991726c5ce552016, type: 2}
-  head: {fileID: 0}
   scanDuration: 2.5
   maxDistance: 20
   useSpeedOfSound: 1

@@ -71,10 +71,28 @@
             "icon": null
           },
           {
+            "name": "AudioEchoFilter",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioFilter",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
             "name": "AudioListener",
             "scenes": [
               "Assets/Mine/Example/Example.unity"
             ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioLowPassFilter",
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -85,8 +103,26 @@
             "icon": null
           },
           {
+            "name": "AudioMixer",
+            "scenes": [
+              "Assets/Mine/Example/Example.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AudioMixerGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Mine/Example/Example.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioMixerSnapshot",
+            "scenes": [
+              "Assets/Mine/Example/Example.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -99,7 +135,31 @@
             "icon": null
           },
           {
+            "name": "AudioReverbFilter",
+            "scenes": [
+              "Assets/Mine/Example/Example.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioReverbZone",
+            "scenes": [
+              "Assets/Mine/Example/Example.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AudioSource",
+            "scenes": [
+              "Assets/Mine/Example/Example.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Behaviour",
             "scenes": [
               "Assets/Mine/Example/Example.unity"
             ],

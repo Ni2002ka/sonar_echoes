@@ -126,9 +126,50 @@ extern void U3CShowImpactRippleU3Ed__14_System_Collections_IEnumerator_Reset_m9C
 extern void U3CShowImpactRippleU3Ed__14_System_Collections_IEnumerator_get_Current_mCE1603804E57C39AABF1E455C2BF6AF1E1BACCD3 (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
+extern void CustomAcoustics_Start_mC544DC5A4D77BC7C40B54C1EE292C63F2515E984 (void);
+extern void CustomAcoustics_InitializeReflectionNodes_m649BD3B06209D58F67D7441BF8D254BA3D05ED05 (void);
+extern void CustomAcoustics_LinkToPlayerVoice_m87B51BEA44B1D54B02E02D8265E298E545ABDB37 (void);
+extern void CustomAcoustics_UpdateAcousticsLoop_mCD353BB3CAD0A798029A7DF18D4A9F828B80BD45 (void);
+extern void CustomAcoustics_GetMaterialCutoff_m9687E45CEB0CBB43AC765B5DF5AE4C81C01B8C1E (void);
+extern void CustomAcoustics_UpdateLateReverb_m2D35FF2E7BF65434C39C941E5771A882CCAE89C9 (void);
+extern void CustomAcoustics__ctor_m6772ADD2C5B57592B8FC272059C6C2CAB029BFE6 (void);
+extern void ReflectionNode__ctor_m4B00B57792820B026CA0DAA85CE5D1EA59303F12 (void);
+extern void U3CLinkToPlayerVoiceU3Ed__12__ctor_m1DC2155898557A09CBFBCAC2FEBA31B3205C6621 (void);
+extern void U3CLinkToPlayerVoiceU3Ed__12_System_IDisposable_Dispose_m7CD84CB3EEFA8C1B926B758C174BAC05F5774045 (void);
+extern void U3CLinkToPlayerVoiceU3Ed__12_MoveNext_m6B7966FF4072C743D8650E4256C698E934C55378 (void);
+extern void U3CLinkToPlayerVoiceU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m120BB4A07CF61C26DFA63C1D7319D7266AB6538F (void);
+extern void U3CLinkToPlayerVoiceU3Ed__12_System_Collections_IEnumerator_Reset_m0979DAF52B77B02271049B522BCA6E0E161B0604 (void);
+extern void U3CLinkToPlayerVoiceU3Ed__12_System_Collections_IEnumerator_get_Current_m403A667A972E56C7285BA06DB776CA271D76E647 (void);
+extern void U3CUpdateAcousticsLoopU3Ed__13__ctor_m0C96A2097E34A4B6F27B2A8920FF1FFE90E6FFDE (void);
+extern void U3CUpdateAcousticsLoopU3Ed__13_System_IDisposable_Dispose_mF73CB52705EDC3B8F924363DBB1E7493A9F0D89D (void);
+extern void U3CUpdateAcousticsLoopU3Ed__13_MoveNext_m696E866A903DE1759D8D35144B2A8349964F910C (void);
+extern void U3CUpdateAcousticsLoopU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD74A3F1B92422036BD607064B734850F8D69C8A3 (void);
+extern void U3CUpdateAcousticsLoopU3Ed__13_System_Collections_IEnumerator_Reset_m4F0D57A47329575FB452B2A4D786A5B47A6206B4 (void);
+extern void U3CUpdateAcousticsLoopU3Ed__13_System_Collections_IEnumerator_get_Current_m773DA3724B4A18BE327C586DEC51A4B31D3D0F98 (void);
+extern void DynamicAudio_Start_mA03990BDD86B8CACB33FDE094BA5C9D35426BD5E (void);
+extern void DynamicAudio_Update_m6F389E882586503231094E322E7AB4B2EB1FBD0C (void);
+extern void DynamicAudio__ctor_mF35577F4FC7F9953E10FAA2C40357B496EEDF470 (void);
+extern void HMSoundSource_Start_mE6238C1DC88F3B0BA51BF830702F42C93EDC76BA (void);
+extern void HMSoundSource_Update_m020141F072B8EA13F409525337336EF23E23A88B (void);
+extern void HMSoundSource_AcousticsUpdate_m1A44AC5B30FBD84DEDC3189AE03CA9088A614874 (void);
+extern void HMSoundSource__ctor_mA37F1CFDE79240C813390954AE57096A5B7EDCD5 (void);
+extern void U3CAcousticsUpdateU3Ed__2__ctor_m6FABE81FD0CD3E7D3332D06007B9CF124290D49D (void);
+extern void U3CAcousticsUpdateU3Ed__2_System_IDisposable_Dispose_m7B8D4E26637EAFF9D5586931FB6EC12D1C4539CE (void);
+extern void U3CAcousticsUpdateU3Ed__2_MoveNext_m17175CE2B185DF91BA849F88047BCFECE44F6682 (void);
+extern void U3CAcousticsUpdateU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m597BB949272CACE4EF4AB5FA005B06ECF8592F15 (void);
+extern void U3CAcousticsUpdateU3Ed__2_System_Collections_IEnumerator_Reset_m840B4517B9B70A3DD53A44506BFBC7B0333886DC (void);
+extern void U3CAcousticsUpdateU3Ed__2_System_Collections_IEnumerator_get_Current_m3D54B86FDEFB6CE1EC31404BD9F84FDD828636B2 (void);
+extern void MicrophoneReplay_Start_mA140D917A661A134FD613B365147FD5DE24E765B (void);
+extern void MicrophoneReplay__ctor_mFF0974978CCBE3C26188ABEB48CE5AC4865B3583 (void);
+extern void U3CStartU3Ed__2__ctor_m0A337A376F030E73A27D55BE1C4570C0B2ECF163 (void);
+extern void U3CStartU3Ed__2_System_IDisposable_Dispose_m7D60901804F9812B5230203D94CF170DFB862BA0 (void);
+extern void U3CStartU3Ed__2_MoveNext_m6D04FD91E373F957FBDEF94094F070B85CCDC16C (void);
+extern void U3CStartU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m99774649024874686053E9AD812247FE94F27B0F (void);
+extern void U3CStartU3Ed__2_System_Collections_IEnumerator_Reset_m7225C3F22CD5F49212D1143F1198AC1F9A77261E (void);
+extern void U3CStartU3Ed__2_System_Collections_IEnumerator_get_Current_m88B61842BB823695A732CE243F5C8F277A111047 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[121] = 
+static Il2CppMethodPointer s_methodPointers[162] = 
 {
 	EchoIntensityHudView_Initialize_m4070B8CF252B942E2AE04CEA47AF150FB1B084D4,
 	EchoIntensityHudView_NotifyAdjusting_mF5DA6BC9557B675E47E77243E561C624F6113FB6,
@@ -249,10 +290,51 @@ static Il2CppMethodPointer s_methodPointers[121] =
 	U3CShowImpactRippleU3Ed__14_System_Collections_IEnumerator_get_Current_mCE1603804E57C39AABF1E455C2BF6AF1E1BACCD3,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	CustomAcoustics_Start_mC544DC5A4D77BC7C40B54C1EE292C63F2515E984,
+	CustomAcoustics_InitializeReflectionNodes_m649BD3B06209D58F67D7441BF8D254BA3D05ED05,
+	CustomAcoustics_LinkToPlayerVoice_m87B51BEA44B1D54B02E02D8265E298E545ABDB37,
+	CustomAcoustics_UpdateAcousticsLoop_mCD353BB3CAD0A798029A7DF18D4A9F828B80BD45,
+	CustomAcoustics_GetMaterialCutoff_m9687E45CEB0CBB43AC765B5DF5AE4C81C01B8C1E,
+	CustomAcoustics_UpdateLateReverb_m2D35FF2E7BF65434C39C941E5771A882CCAE89C9,
+	CustomAcoustics__ctor_m6772ADD2C5B57592B8FC272059C6C2CAB029BFE6,
+	ReflectionNode__ctor_m4B00B57792820B026CA0DAA85CE5D1EA59303F12,
+	U3CLinkToPlayerVoiceU3Ed__12__ctor_m1DC2155898557A09CBFBCAC2FEBA31B3205C6621,
+	U3CLinkToPlayerVoiceU3Ed__12_System_IDisposable_Dispose_m7CD84CB3EEFA8C1B926B758C174BAC05F5774045,
+	U3CLinkToPlayerVoiceU3Ed__12_MoveNext_m6B7966FF4072C743D8650E4256C698E934C55378,
+	U3CLinkToPlayerVoiceU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m120BB4A07CF61C26DFA63C1D7319D7266AB6538F,
+	U3CLinkToPlayerVoiceU3Ed__12_System_Collections_IEnumerator_Reset_m0979DAF52B77B02271049B522BCA6E0E161B0604,
+	U3CLinkToPlayerVoiceU3Ed__12_System_Collections_IEnumerator_get_Current_m403A667A972E56C7285BA06DB776CA271D76E647,
+	U3CUpdateAcousticsLoopU3Ed__13__ctor_m0C96A2097E34A4B6F27B2A8920FF1FFE90E6FFDE,
+	U3CUpdateAcousticsLoopU3Ed__13_System_IDisposable_Dispose_mF73CB52705EDC3B8F924363DBB1E7493A9F0D89D,
+	U3CUpdateAcousticsLoopU3Ed__13_MoveNext_m696E866A903DE1759D8D35144B2A8349964F910C,
+	U3CUpdateAcousticsLoopU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD74A3F1B92422036BD607064B734850F8D69C8A3,
+	U3CUpdateAcousticsLoopU3Ed__13_System_Collections_IEnumerator_Reset_m4F0D57A47329575FB452B2A4D786A5B47A6206B4,
+	U3CUpdateAcousticsLoopU3Ed__13_System_Collections_IEnumerator_get_Current_m773DA3724B4A18BE327C586DEC51A4B31D3D0F98,
+	DynamicAudio_Start_mA03990BDD86B8CACB33FDE094BA5C9D35426BD5E,
+	DynamicAudio_Update_m6F389E882586503231094E322E7AB4B2EB1FBD0C,
+	DynamicAudio__ctor_mF35577F4FC7F9953E10FAA2C40357B496EEDF470,
+	HMSoundSource_Start_mE6238C1DC88F3B0BA51BF830702F42C93EDC76BA,
+	HMSoundSource_Update_m020141F072B8EA13F409525337336EF23E23A88B,
+	HMSoundSource_AcousticsUpdate_m1A44AC5B30FBD84DEDC3189AE03CA9088A614874,
+	HMSoundSource__ctor_mA37F1CFDE79240C813390954AE57096A5B7EDCD5,
+	U3CAcousticsUpdateU3Ed__2__ctor_m6FABE81FD0CD3E7D3332D06007B9CF124290D49D,
+	U3CAcousticsUpdateU3Ed__2_System_IDisposable_Dispose_m7B8D4E26637EAFF9D5586931FB6EC12D1C4539CE,
+	U3CAcousticsUpdateU3Ed__2_MoveNext_m17175CE2B185DF91BA849F88047BCFECE44F6682,
+	U3CAcousticsUpdateU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m597BB949272CACE4EF4AB5FA005B06ECF8592F15,
+	U3CAcousticsUpdateU3Ed__2_System_Collections_IEnumerator_Reset_m840B4517B9B70A3DD53A44506BFBC7B0333886DC,
+	U3CAcousticsUpdateU3Ed__2_System_Collections_IEnumerator_get_Current_m3D54B86FDEFB6CE1EC31404BD9F84FDD828636B2,
+	MicrophoneReplay_Start_mA140D917A661A134FD613B365147FD5DE24E765B,
+	MicrophoneReplay__ctor_mFF0974978CCBE3C26188ABEB48CE5AC4865B3583,
+	U3CStartU3Ed__2__ctor_m0A337A376F030E73A27D55BE1C4570C0B2ECF163,
+	U3CStartU3Ed__2_System_IDisposable_Dispose_m7D60901804F9812B5230203D94CF170DFB862BA0,
+	U3CStartU3Ed__2_MoveNext_m6D04FD91E373F957FBDEF94094F070B85CCDC16C,
+	U3CStartU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m99774649024874686053E9AD812247FE94F27B0F,
+	U3CStartU3Ed__2_System_Collections_IEnumerator_Reset_m7225C3F22CD5F49212D1143F1198AC1F9A77261E,
+	U3CStartU3Ed__2_System_Collections_IEnumerator_get_Current_m88B61842BB823695A732CE243F5C8F277A111047,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[121] = 
+static const int32_t s_InvokerIndices[162] = 
 {
 	15098,
 	14892,
@@ -262,7 +344,7 @@ static const int32_t s_InvokerIndices[121] =
 	20212,
 	7670,
 	15202,
-	34327,
+	34330,
 	20212,
 	15030,
 	20212,
@@ -277,16 +359,16 @@ static const int32_t s_InvokerIndices[121] =
 	20212,
 	20212,
 	12803,
-	31678,
-	31678,
-	31674,
-	31674,
+	31681,
+	31681,
+	31677,
+	31677,
 	20212,
-	32574,
-	31678,
-	32117,
-	28659,
-	34426,
+	32577,
+	31681,
+	32120,
+	28662,
+	34429,
 	4668,
 	20212,
 	20212,
@@ -294,21 +376,21 @@ static const int32_t s_InvokerIndices[121] =
 	20212,
 	20212,
 	20112,
-	34382,
-	31674,
-	31674,
+	34385,
+	31677,
+	31677,
 	20212,
 	20212,
 	20212,
 	20212,
-	34269,
-	34426,
-	34269,
+	34272,
+	34429,
+	34272,
 	20112,
-	34382,
+	34385,
 	20112,
-	31678,
-	31678,
+	31681,
+	31681,
 	20212,
 	6131,
 	2219,
@@ -329,7 +411,7 @@ static const int32_t s_InvokerIndices[121] =
 	15098,
 	15098,
 	20212,
-	34426,
+	34429,
 	20212,
 	15098,
 	15098,
@@ -347,17 +429,17 @@ static const int32_t s_InvokerIndices[121] =
 	20212,
 	20200,
 	20112,
-	34421,
-	34382,
-	34421,
-	34382,
+	34424,
+	34385,
+	34424,
+	34385,
 	20212,
 	20212,
 	20212,
 	20212,
 	3000,
 	3010,
-	34269,
+	34272,
 	20212,
 	15030,
 	20212,
@@ -373,14 +455,55 @@ static const int32_t s_InvokerIndices[121] =
 	20003,
 	20212,
 	20212,
-	34468,
+	20212,
+	20212,
+	20003,
+	20003,
+	12981,
+	15202,
+	20212,
+	20212,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	20212,
+	20212,
+	20212,
+	20212,
+	20212,
+	20003,
+	20212,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	20003,
+	20212,
+	15030,
+	20212,
+	19792,
+	20003,
+	20212,
+	20003,
+	34471,
 	20212,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	121,
+	162,
 	s_methodPointers,
 	0,
 	NULL,

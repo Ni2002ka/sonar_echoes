@@ -1742,6 +1742,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: _enableDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2525,6 +2529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1de83af7b3b114b919e47e08eb80b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicrophoneReplay
+  bufferLengthSec: 1
+  sampleRate: 0
 --- !u!82 &629919433
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2632,19 +2638,19 @@ AudioReverbFilter:
   m_Enabled: 1
   m_DryLevel: 0
   m_Room: -1000
-  m_RoomHF: -476
-  m_DecayTime: 4.32
-  m_DecayHFRatio: 0.59
-  m_ReflectionsLevel: -789
-  m_ReverbLevel: -289
-  m_ReverbDelay: 0.03
+  m_RoomHF: -237
+  m_DecayTime: 2.7
+  m_DecayHFRatio: 0.79
+  m_ReflectionsLevel: -1214
+  m_ReverbLevel: 395
+  m_ReverbDelay: 0.02
   m_Diffusion: 100
   m_Density: 100
   m_HFReference: 5000
   m_RoomLF: 0
   m_LFReference: 250
   m_ReflectionsDelay: 0
-  m_ReverbPreset: 7
+  m_ReverbPreset: 14
 --- !u!114 &629919435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,14 +2663,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf0f41e7363d9046a9d64dd8533f1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomAcoustics
-  playerVoiceSource: {fileID: 0}
+  playerVoiceSource: {fileID: 629919433}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   speedOfSound: 343
   maxDistance: 30
   updateRate: 0.1
   masterReflectionVolume: 0.8
+  maxEchoDelayMs: 500
 --- !u!167 &629919436
 AudioReverbZone:
   m_ObjectHideFlags: 0

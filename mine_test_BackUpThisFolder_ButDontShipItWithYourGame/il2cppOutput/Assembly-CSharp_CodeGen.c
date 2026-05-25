@@ -28,7 +28,8 @@ extern void EchoLightingController_Update_m8FA546073F6897634156A4D03171876DF0493
 extern void EchoLightingController_SetLightsOn_mF6145EB9E7B37AC00E27ED101E68DBDA41593276 (void);
 extern void EchoLightingController_ApplyLightsState_m791DE88507602BA8C5FA5FF30D14BEA528022864 (void);
 extern void EchoLightingController_CacheRenderers_m21C249B7FAAB4ADF8BFEE200A1943D1B40310703 (void);
-extern void EchoLightingController_CacheLanternLights_m8A2BD5D23DC6918693EC330E7E3DE4A18EAF2644 (void);
+extern void EchoLightingController_CacheLanterns_m891486F84D0BB253F580EB67EE8516EE44A0A051 (void);
+extern void EchoLightingController_IsUnderLantern_m858DC5ACA29BDFC2CE8FB8AEE95D85F583FD18D6 (void);
 extern void EchoLightingController_ResolveOriginalMaterial_m0FC62BDE9387153927FEBC12F524BC4D232C6D1B (void);
 extern void EchoLightingController_IsEchoMaterial_m4FC415131479D2A4E321F92836EA20E0C0BDDEA3 (void);
 extern void EchoLightingController_ShouldSkipRenderer_mB57F9815F4329B311AA3A2A7059593F448CF8E96 (void);
@@ -156,7 +157,7 @@ extern void U3CStartU3Ed__2_System_Collections_IEnumerator_Reset_m7225C3F22CD5F4
 extern void U3CStartU3Ed__2_System_Collections_IEnumerator_get_Current_m88B61842BB823695A732CE243F5C8F277A111047 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[149] = 
+static Il2CppMethodPointer s_methodPointers[150] = 
 {
 	EchoIntensityHudView_Initialize_m4070B8CF252B942E2AE04CEA47AF150FB1B084D4,
 	EchoIntensityHudView_NotifyAdjusting_mF5DA6BC9557B675E47E77243E561C624F6113FB6,
@@ -179,7 +180,8 @@ static Il2CppMethodPointer s_methodPointers[149] =
 	EchoLightingController_SetLightsOn_mF6145EB9E7B37AC00E27ED101E68DBDA41593276,
 	EchoLightingController_ApplyLightsState_m791DE88507602BA8C5FA5FF30D14BEA528022864,
 	EchoLightingController_CacheRenderers_m21C249B7FAAB4ADF8BFEE200A1943D1B40310703,
-	EchoLightingController_CacheLanternLights_m8A2BD5D23DC6918693EC330E7E3DE4A18EAF2644,
+	EchoLightingController_CacheLanterns_m891486F84D0BB253F580EB67EE8516EE44A0A051,
+	EchoLightingController_IsUnderLantern_m858DC5ACA29BDFC2CE8FB8AEE95D85F583FD18D6,
 	EchoLightingController_ResolveOriginalMaterial_m0FC62BDE9387153927FEBC12F524BC4D232C6D1B,
 	EchoLightingController_IsEchoMaterial_m4FC415131479D2A4E321F92836EA20E0C0BDDEA3,
 	EchoLightingController_ShouldSkipRenderer_mB57F9815F4329B311AA3A2A7059593F448CF8E96,
@@ -308,7 +310,7 @@ static Il2CppMethodPointer s_methodPointers[149] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[149] = 
+static const int32_t s_InvokerIndices[150] = 
 {
 	15098,
 	14892,
@@ -318,7 +320,7 @@ static const int32_t s_InvokerIndices[149] =
 	20212,
 	7670,
 	15202,
-	34330,
+	34331,
 	20212,
 	15030,
 	20212,
@@ -332,17 +334,18 @@ static const int32_t s_InvokerIndices[149] =
 	14892,
 	20212,
 	20212,
+	31682,
 	12803,
-	31681,
-	31681,
-	31677,
-	31677,
+	31682,
+	31682,
+	31678,
+	31678,
 	20212,
-	32577,
-	31681,
-	32120,
-	28662,
-	34429,
+	32578,
+	31682,
+	32121,
+	28663,
+	34430,
 	4668,
 	20212,
 	20212,
@@ -350,21 +353,21 @@ static const int32_t s_InvokerIndices[149] =
 	20212,
 	20212,
 	20112,
-	34385,
-	31677,
-	31677,
+	34386,
+	31678,
+	31678,
 	20212,
 	20212,
 	20212,
 	20212,
-	34272,
-	34429,
-	34272,
+	34273,
+	34430,
+	34273,
 	20112,
-	34385,
+	34386,
 	20112,
-	31681,
-	31681,
+	31682,
+	31682,
 	20212,
 	6131,
 	2219,
@@ -385,7 +388,7 @@ static const int32_t s_InvokerIndices[149] =
 	15098,
 	15098,
 	20212,
-	34429,
+	34430,
 	20212,
 	15098,
 	15098,
@@ -403,17 +406,17 @@ static const int32_t s_InvokerIndices[149] =
 	20212,
 	20200,
 	20112,
-	34424,
-	34385,
-	34424,
-	34385,
+	34425,
+	34386,
+	34425,
+	34386,
 	20212,
 	20212,
 	20212,
 	20212,
 	3000,
 	3010,
-	34272,
+	34273,
 	20212,
 	15030,
 	20212,
@@ -457,14 +460,14 @@ static const int32_t s_InvokerIndices[149] =
 	20003,
 	20212,
 	20003,
-	34471,
+	34472,
 	20212,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	149,
+	150,
 	s_methodPointers,
 	0,
 	NULL,

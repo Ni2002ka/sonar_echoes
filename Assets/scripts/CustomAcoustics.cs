@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioReverbZone))]
 public class CustomAcoustics : MonoBehaviour
 {
     [Header("Dependencies")]
@@ -16,9 +15,6 @@ public class CustomAcoustics : MonoBehaviour
     public float updateRate = 0.1f;   // How often to cast rays (seconds)
     [Range(0f, 1f)]
     public float masterReflectionVolume = 0.8f;
-
-    // The late reverb applied to the whole room
-    private AudioReverbZone reverbZone;
 
     // Directions to cast rays (Local to the player)
     private readonly Vector3[] directions = {
@@ -46,8 +42,6 @@ public class CustomAcoustics : MonoBehaviour
             enabled = false;
             return;
         }
-
-        reverbZone = GetComponent<AudioReverbZone>();
 
         InitializeReflectionNodes();
 
@@ -166,7 +160,7 @@ public class CustomAcoustics : MonoBehaviour
             }
 
             // Update the Late Reverb based on room size
-            UpdateLateReverb(totalDistance / directions.Length);
+            //UpdateLateReverb(totalDistance / directions.Length);
 
             yield return new WaitForSeconds(updateRate);
         }
@@ -191,17 +185,17 @@ public class CustomAcoustics : MonoBehaviour
         }
     }
 
-    private void UpdateLateReverb(float averageRoomDistance)
-    {
-        if (averageRoomDistance < 3f)
-            reverbZone.reverbPreset = AudioReverbPreset.Bathroom;
-        else if (averageRoomDistance < 8f)
-            reverbZone.reverbPreset = AudioReverbPreset.Room;
-        else if (averageRoomDistance < 15f)
-            reverbZone.reverbPreset = AudioReverbPreset.Auditorium;
-        else if (averageRoomDistance < 30f)
-            reverbZone.reverbPreset = AudioReverbPreset.Cave;
-        else
-            reverbZone.reverbPreset = AudioReverbPreset.Mountains; // Massive open space tail
-    }
+    //private void UpdateLateReverb(float averageRoomDistance)
+    //{
+    //    if (averageRoomDistance < 3f)
+    //        reverbZone.reverbPreset = AudioReverbPreset.Bathroom;
+    //    else if (averageRoomDistance < 8f)
+    //        reverbZone.reverbPreset = AudioReverbPreset.Room;
+    //    else if (averageRoomDistance < 15f)
+    //        reverbZone.reverbPreset = AudioReverbPreset.Auditorium;
+    //    else if (averageRoomDistance < 30f)
+    //        reverbZone.reverbPreset = AudioReverbPreset.Cave;
+    //    else
+    //        reverbZone.reverbPreset = AudioReverbPreset.Mountains; // Massive open space tail
+    //}
 }

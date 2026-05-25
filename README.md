@@ -14,3 +14,7 @@ To use:
 This should be enough to generate "dry" early echoes. To flesh out the sound:
 * Add an AudioReverbFilter to your player voice source.
 * Consider positioning the player voice source behind the player head.
+
+Tutorials for setting up Interaction:
+* https://developers.meta.com/horizon/documentation/unity/unity-isdk-setup/
+* https://developers.meta.com/horizon/documentation/unity/unity-isdk-getting-started/

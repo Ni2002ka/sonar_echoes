@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Mine/Example/Example.unity
+  - enabled: 0
+    path: Assets/Mine/Example/Example_old.unity
     guid: 117fd0fe1401a1148a97cb9de246ad0a
+  - enabled: 1
+    path: Assets/Scenes/Mine.unity
+    guid: 159634c0c45ef4e52a6742d4890c9dd1
+  - enabled: 0
+    path: Assets/Scenes/CustomAudioDemo.unity
+    guid: 1b73951b07ebab64196ef9168f1315a3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 866c62b8440cf421d939b7dca9d80a64, type: 2}

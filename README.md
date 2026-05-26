@@ -18,3 +18,4 @@ This should be enough to generate "dry" early echoes. To flesh out the sound:
 Tutorials for setting up Interaction:
 * https://developers.meta.com/horizon/documentation/unity/unity-isdk-setup/
 * https://developers.meta.com/horizon/documentation/unity/unity-isdk-getting-started/
+* I needed to add the raycast interactable script to the default UI Backplate prefab.

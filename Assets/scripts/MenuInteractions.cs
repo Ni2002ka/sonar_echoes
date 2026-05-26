@@ -75,6 +75,11 @@ public class MenuInteractions : MonoBehaviour
         customAcoustics.masterReflectionVolume = 0f;
     }
 
+    public void ChangeSpeedOfSound(float multiplier)
+    {
+        customAcoustics.speedOfSound = 343 * multiplier; ;
+    }
+
     // Update is called once per frame
     void Update()
     {

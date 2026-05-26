@@ -87,21 +87,52 @@ public class CustomAcoustics : MonoBehaviour
         }
     }
 
+    //private IEnumerator LinkToPlayerVoice()
+    //{
+    //    // Wait until your MicrophoneReplay.cs script has successfully initialized the mic
+    //    // and assigned the recording clip to the player's AudioSource.
+    //    while (playerVoiceSource.clip == null)
+    //    {
+    //        yield return null;
+    //    }
+
+    //    // Once the clip exists, assign it to all of our wall reflection nodes
+    //    foreach (ReflectionNode node in reflectionNodes)
+    //    {
+    //        node.audioSource.clip = playerVoiceSource.clip;
+
+    //        // Sync the playback position to match the player's main AudioSource exactly
+    //        node.audioSource.timeSamples = playerVoiceSource.timeSamples;
+    //        node.audioSource.Play();
+    //    }
+
+    //    // Now that audio is flowing, begin tracking the walls and updating the delays
+    //    StartCoroutine(UpdateAcousticsLoop());
+    //}
+
     private IEnumerator LinkToPlayerVoice()
     {
         // Wait until your MicrophoneReplay.cs script has successfully initialized the mic
-        // and assigned the recording clip to the player's AudioSource.
-        while (playerVoiceSource.clip == null)
+        // and assigned the recording clip to the player's AudioSource, AND it has started playing.
+        while (playerVoiceSource.clip == null || !playerVoiceSource.isPlaying)
         {
             yield return null;
         }
 
-        // Once the clip exists, assign it to all of our wall reflection nodes
+        // IMPORTANT: Add a small delay here after playerVoiceSource *starts* playing.
+        // This allows Unity's audio engine to fully buffer and stabilize the playerVoiceSource's output,
+        // ensuring that playerVoiceSource.timeSamples accurately reflects the *audible* position.
+        yield return new WaitForSeconds(0.1f);
+        // You might need to adjust this value. Start with 0.1f, if still issues, try 0.2f or more.
+        // Too low: may still mis-sync. Too high: adds initial delay to echoes.
+
+        // Once the clip exists and playerVoiceSource is stable, assign it to all of our wall reflection nodes
         foreach (ReflectionNode node in reflectionNodes)
         {
             node.audioSource.clip = playerVoiceSource.clip;
 
-            // Sync the playback position to match the player's main AudioSource exactly
+            // Sync the playback position to match the player's main AudioSource exactly.
+            // This ensures both sources are reading from the same point in the microphone clip.
             node.audioSource.timeSamples = playerVoiceSource.timeSamples;
             node.audioSource.Play();
         }

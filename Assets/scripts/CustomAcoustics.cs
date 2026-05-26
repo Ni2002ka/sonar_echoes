@@ -184,18 +184,4 @@ public class CustomAcoustics : MonoBehaviour
                 return 10000f; // Standard drywall
         }
     }
-
-    //private void UpdateLateReverb(float averageRoomDistance)
-    //{
-    //    if (averageRoomDistance < 3f)
-    //        reverbZone.reverbPreset = AudioReverbPreset.Bathroom;
-    //    else if (averageRoomDistance < 8f)
-    //        reverbZone.reverbPreset = AudioReverbPreset.Room;
-    //    else if (averageRoomDistance < 15f)
-    //        reverbZone.reverbPreset = AudioReverbPreset.Auditorium;
-    //    else if (averageRoomDistance < 30f)
-    //        reverbZone.reverbPreset = AudioReverbPreset.Cave;
-    //    else
-    //        reverbZone.reverbPreset = AudioReverbPreset.Mountains; // Massive open space tail
-    //}
 }

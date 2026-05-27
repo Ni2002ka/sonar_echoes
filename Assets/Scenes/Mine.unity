@@ -2529,8 +2529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1de83af7b3b114b919e47e08eb80b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicrophoneReplay
-  bufferLengthSec: 1
-  sampleRate: 0
 --- !u!82 &629919433
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2540,13 +2538,13 @@ AudioSource:
   m_GameObject: {fileID: 629919430}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300001, guid: 03d4f07283ae4307b8c7a2ea7ad08068, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2635,7 +2633,7 @@ AudioReverbFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629919430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_DryLevel: 0
   m_Room: -1000
   m_RoomHF: -237
@@ -2666,12 +2664,11 @@ MonoBehaviour:
   playerVoiceSource: {fileID: 629919433}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   speedOfSound: 343
   maxDistance: 30
   updateRate: 0.1
   masterReflectionVolume: 0.8
-  maxEchoDelayMs: 500
 --- !u!167 &629919436
 AudioReverbZone:
   m_ObjectHideFlags: 0
@@ -2679,7 +2676,7 @@ AudioReverbZone:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629919430}
-  m_Enabled: 0
+  m_Enabled: 1
   m_MinDistance: 10
   m_MaxDistance: 15
   m_ReverbPreset: 1

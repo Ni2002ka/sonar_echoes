@@ -163,6 +163,9 @@ extern void MenuInteractions_EarlyEchoOff_mB9AC5FB20C0DA1B0D5059FB7433D02F5C43C1
 extern void MenuInteractions_ChangeSpeedOfSound_m365C461ED6E80D0186D2E74E08C99FFEB0D70929 (void);
 extern void MenuInteractions_Update_mBD03A3C24AECCCE96C24CE9D2F192FC48B77C567 (void);
 extern void MenuInteractions__ctor_m9B746EA8AEE994943CDAEA8A7308291C631EF466 (void);
+extern void MenuToggleControllerButton_Awake_m9FBAB27D4AC2FFAD61812562D3E0E62A87D12297 (void);
+extern void MenuToggleControllerButton_Update_m7F47D5129652B97DE570975124384718D627F931 (void);
+extern void MenuToggleControllerButton__ctor_mE3E60C81730DC2D589D2EB78C3A5402D036EF2A9 (void);
 extern void MicrophoneReplay_Start_mA140D917A661A134FD613B365147FD5DE24E765B (void);
 extern void MicrophoneReplay__ctor_mFF0974978CCBE3C26188ABEB48CE5AC4865B3583 (void);
 extern void U3CStartU3Ed__3__ctor_m9CCD000B445F238107806C72918C7940A7ED3E5F (void);
@@ -176,7 +179,7 @@ extern void WallMatManager_changeMaterial_m3DAB9CB81BF127D57F36BD21AB45F166D0653
 extern void WallMatManager__ctor_m40C6BC2F41A996D8FC72E4DEE537F5035BED37EB (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[169] = 
+static Il2CppMethodPointer s_methodPointers[172] = 
 {
 	EchoIntensityHudView_Initialize_m4070B8CF252B942E2AE04CEA47AF150FB1B084D4,
 	EchoIntensityHudView_NotifyAdjusting_mF5DA6BC9557B675E47E77243E561C624F6113FB6,
@@ -334,6 +337,9 @@ static Il2CppMethodPointer s_methodPointers[169] =
 	MenuInteractions_ChangeSpeedOfSound_m365C461ED6E80D0186D2E74E08C99FFEB0D70929,
 	MenuInteractions_Update_mBD03A3C24AECCCE96C24CE9D2F192FC48B77C567,
 	MenuInteractions__ctor_m9B746EA8AEE994943CDAEA8A7308291C631EF466,
+	MenuToggleControllerButton_Awake_m9FBAB27D4AC2FFAD61812562D3E0E62A87D12297,
+	MenuToggleControllerButton_Update_m7F47D5129652B97DE570975124384718D627F931,
+	MenuToggleControllerButton__ctor_mE3E60C81730DC2D589D2EB78C3A5402D036EF2A9,
 	MicrophoneReplay_Start_mA140D917A661A134FD613B365147FD5DE24E765B,
 	MicrophoneReplay__ctor_mFF0974978CCBE3C26188ABEB48CE5AC4865B3583,
 	U3CStartU3Ed__3__ctor_m9CCD000B445F238107806C72918C7940A7ED3E5F,
@@ -348,7 +354,7 @@ static Il2CppMethodPointer s_methodPointers[169] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[169] = 
+static const int32_t s_InvokerIndices[172] = 
 {
 	16089,
 	15855,
@@ -506,6 +512,9 @@ static const int32_t s_InvokerIndices[169] =
 	16198,
 	21491,
 	21491,
+	21491,
+	21491,
+	21491,
 	21263,
 	21491,
 	16004,
@@ -524,7 +533,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	169,
+	172,
 	s_methodPointers,
 	0,
 	NULL,

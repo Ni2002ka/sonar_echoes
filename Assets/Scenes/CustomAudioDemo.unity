@@ -2168,7 +2168,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6449679968975012787, guid: f6a9dbd201d5f2d46bfd46d32e2c2f84, type: 3}
   m_PrefabInstance: {fileID: 768661183411187344}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 768661183411187345}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e8cf6a21b721f34f90d8c605615824d, type: 3}
@@ -2676,6 +2676,7 @@ GameObject:
   - component: {fileID: 1375737370}
   - component: {fileID: 1375737369}
   - component: {fileID: 1375737371}
+  - component: {fileID: 1375737372}
   m_Layer: 0
   m_Name: OVRCameraRig
   m_TagString: Untagged
@@ -2806,6 +2807,24 @@ MonoBehaviour:
   _readOnlyWideMotionMode2HandPosesEnabled: 0
   wideMotionMode2HandPosesEnabled: 0
   dynamicResolutionVersion: 1
+--- !u!114 &1375737372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375737368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e4f2a91c3d54e6a9b7c8d0e1f2a3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EchoVRLocomotion
+  playerRig: {fileID: 0}
+  head: {fileID: 0}
+  moveSpeed: 2.5
+  verticalSpeed: 2.5
+  deadzone: 0.15
+  useCharacterController: 1
 --- !u!114 &1380479892 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5381013888056139195, guid: fbbc8f5ce7be08346858f530b28cc7a8, type: 3}
@@ -4173,8 +4192,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6615904525920887200, guid: f6a9dbd201d5f2d46bfd46d32e2c2f84, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 768661183411187346}
   m_SourcePrefab: {fileID: 100100000, guid: f6a9dbd201d5f2d46bfd46d32e2c2f84, type: 3}
+--- !u!1 &768661183411187345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6615904525920887200, guid: f6a9dbd201d5f2d46bfd46d32e2c2f84, type: 3}
+  m_PrefabInstance: {fileID: 768661183411187344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &768661183411187346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768661183411187345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc902618b220438c99dd71bf4f35781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuToggleControllerButton
+  menuRoot: {fileID: 0}
+  menuRootName: ButtonMenu Variant
+  allowKeyboardToggle: 1
+  startVisible: 1
 --- !u!1001 &879506755500505763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5306,6 +5349,10 @@ PrefabInstance:
     - target: {fileID: 5568758619435239318, guid: 46fdef3df9a5a354caf7692f85e5eff2, type: 3}
       propertyPath: m_Name
       value: Locomotor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568758619435239318, guid: 46fdef3df9a5a354caf7692f85e5eff2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5568758619435239319, guid: 46fdef3df9a5a354caf7692f85e5eff2, type: 3}
       propertyPath: m_RootOrder

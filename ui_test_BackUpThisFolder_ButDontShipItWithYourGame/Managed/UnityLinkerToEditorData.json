@@ -32,7 +32,8 @@
           {
             "name": "AnimationClip",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -49,7 +50,8 @@
           {
             "name": "AnimatorController",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -72,7 +74,8 @@
           {
             "name": "Behaviour",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -92,7 +95,8 @@
           {
             "name": "PositionConstraint",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -535,7 +539,8 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -618,7 +623,8 @@
           {
             "name": "SortingGroup",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -626,7 +632,8 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1186,7 +1193,8 @@
             "name": "CapsuleCollider",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
-              "Assets/Scenes/Mine.unity"
+              "Assets/Scenes/Mine.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1245,7 +1253,8 @@
           {
             "name": "Rigidbody",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1253,7 +1262,8 @@
           {
             "name": "SphereCollider",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1921,7 +1931,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1964,7 +1975,8 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1978,7 +1990,8 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/CustomAudioDemo.unity"
+              "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null

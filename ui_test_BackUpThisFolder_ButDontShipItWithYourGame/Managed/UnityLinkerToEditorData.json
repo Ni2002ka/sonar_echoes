@@ -33,6 +33,7 @@
             "name": "AnimationClip",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -42,6 +43,7 @@
             "name": "Animator",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -51,6 +53,7 @@
             "name": "AnimatorController",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 1,
@@ -66,6 +69,7 @@
             "name": "Avatar",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -75,6 +79,7 @@
             "name": "Behaviour",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -96,6 +101,7 @@
             "name": "PositionConstraint",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -540,6 +546,7 @@
             "name": "RectTransform",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -609,6 +616,7 @@
             "name": "SkinnedMeshRenderer",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -624,6 +632,7 @@
             "name": "SortingGroup",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -633,6 +642,7 @@
             "name": "Sprite",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -1254,6 +1264,7 @@
             "name": "Rigidbody",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -1263,6 +1274,7 @@
             "name": "SphereCollider",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -1932,6 +1944,7 @@
             "name": "Font",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -1976,6 +1989,7 @@
             "name": "Canvas",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -1991,6 +2005,7 @@
             "name": "CanvasRenderer",
             "scenes": [
               "Assets/Scenes/CustomAudioDemo.unity",
+              "Assets/Scenes/Mine.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
